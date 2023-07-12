@@ -52,9 +52,11 @@ boton.addEventListener("click", async () => {
     invalid.style.display = "block";
     invalid.innerHTML = "Debe seleccionar una moneda";
     select.classList.add("is-invalid");
+    input.classList.remove("is-invalid");
   } else if (input.value === "" || input.value <= 0) {
     invalid.style.display = "block";
     input.classList.add("is-invalid");
+    select.classList.remove("is-invalid");
     invalid.innerHTML = "Debe ingresar un monto correcto";
   } else if (input.value > 0 && input.value !== "") {
     let monto = parseInt(input.value);
